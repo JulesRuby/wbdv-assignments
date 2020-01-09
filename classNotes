@@ -1,7 +1,9 @@
 This is just in case I need to transcribe any thoughts or topics from class that I was too lazy to actually reach for my pen to put down...
 Even though that's probably the worst way to use this? I'm a pleeeeeb.
 
-###Jan 8, 2020
+###DSGN 270 Notes:
+
+##Jan 8, 2020
 
 Working with:
 MERN/MEAN likely
@@ -9,4 +11,18 @@ Mongo/Express/React(or Angular)/Node
 (MEN) - needs a 'L'... MELN, pronounced 'Melon' obvs.
 
 
-###Jan 9, 2020
+##Jan 9, 2020
+Butts... Butts, butts, butts
+
+Repitition->Prediction->Mental Model
+Good design is the ability to design somehting that uses our preexisting mental models to help reinforce and make the function of our designs easy and intuitive.
+It's just as important to make sure that your design does not transmit conventions related to functions that run counterintuitive to what we are attempting to telegraph.
+
+
+Homepage layouts:
+Homepages should be of simple convergent design, to make it wasy for people to use, and then result in a convergent result after the use makes a choice
+
+#Don't fuckin' float shit!
+Just use grid + flexbox
+
+Look into the <meta name="viewport"> tag, just to kind of grasp the 1.0 scale for smaller devices using larger resolutions
