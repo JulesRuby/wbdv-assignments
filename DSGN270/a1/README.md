@@ -61,7 +61,7 @@ A quick few things that stood out from the initial page-load:
 - The mobile version of the website has a responsive enough layout in terms of elements scaling down and accomodating good flow
 - Collapsible nav drawer is further simplified under the headings, which can be expanded. This is important because it doesn't overload the user with a plethora of immediate information, and makes things easier to navigate.
 
-## **Bad**
+### **Bad**
 
 - Having a single link to **Tickets** under the **Buy Now** in the menu seems like a wasted action
 - "Burger" menu has a couple nested **FAQ** dropdowns, with the last dropdown being accessed by interaction with the **+** symbol located to the right of the list links. When fully expanded the user will see something like:
