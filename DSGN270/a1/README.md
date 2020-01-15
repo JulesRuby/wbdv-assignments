@@ -1,5 +1,6 @@
 # Assignment 1 : Website Review
 
+
 ## Overall Analysis:
 
 [Bass Coast](https://basscoast.ca/) is geared toward establishing itself as an artistically driven music festival. The website aims to garner enough interest in the event to compel purchase of tickets to the experience, or at the very least, apply to contribute. This is acheived through touting an environment that promises to foster:  
@@ -22,7 +23,6 @@ A quick few things that stood out from the initial page-load:
 
 
 ## User Experience
-______________________________________________
 
 ### **Good**
 
@@ -41,7 +41,6 @@ ______________________________________________
 
 
 ## Accessibility
-______________________________________________
 
 ### **Good**
 
@@ -56,7 +55,6 @@ ______________________________________________
 - The site sections that feature galleries of images don't actually include any alt attribute with the photos, or if it's included it is *"undefined"*
 - [GET TO KNOW THE ARTISTS](https://basscoast.ca/blogs/get-to-know) leads to page with some working information. However there are three navigation links, **FESTIVAL/MUSIC/ART/**, that actually lead to completely empty pages.
 ## Mobile
-____________________________________________
 
 ### **Good**
 
@@ -78,7 +76,6 @@ ____________________________________________
   - Also in mobile landscape, the bouncing button moves behind the **Explore 2020 Theme** button. 
 
 ## Website Content
-___________________________________________
 
 ### **Good**
 
