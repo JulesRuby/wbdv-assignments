@@ -51,7 +51,7 @@ A quick few things that stood out from the initial page-load:
 ### **Bad**
 
 - Website tested at **66%** accessibility through the developer tools.
-- Navigation drawer uses empty `<a href="#">` for the headings of the sections within, which be an obstacle for those using readers, or tabbing to navigate
+- Navigation drawer uses empty `<a href="#">` for the headings of the sections within, which is an obstacle for those using readers, or tabbing to navigate
 - The site sections that feature galleries of images don't actually include any alt attribute with the photos, or if it's included it is *"undefined"*
 - [GET TO KNOW THE ARTISTS](https://basscoast.ca/blogs/get-to-know) leads to page with some working information. However there are three navigation links, **FESTIVAL/MUSIC/ART/**, that actually lead to completely empty pages.
 ## Mobile
@@ -72,7 +72,7 @@ A quick few things that stood out from the initial page-load:
     >>>First Timer's Guide  
     >>>Merritt  
     >>>Now Hiring  
-- The is an animated bouncing scroll button on the main page, inviting an action which is meant to move the user down the page. When touched, the button is highlighted in a soft blue outline, though it does not actually perform any function. For such a powerful CTA to have no function is a waste of user time.
+- There is an animated bouncing scroll button on the main page, inviting an action which is meant to move the user down the page. When touched, the button is highlighted in a soft blue outline, though it does not actually perform any function. For such a powerful CTA to have no function is a waste of user time.
   - Also in mobile landscape, the bouncing button moves behind the **Explore 2020 Theme** button. 
 
 ## Website Content
@@ -85,4 +85,4 @@ A quick few things that stood out from the initial page-load:
 ### **Bad**
 
 - The menu should include their YouTube social media link at the bottom, next to their Vimeo. Also, they should stop using Vimeo.
-- The site does not need an entire gallery beneath the main or index page content there exists a separate gallery page.
+- The site does not need an entire gallery beneath the main/index page content, when there exists a separate gallery page.
