@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Belgrano|Rhodium+Libre&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: palevioletred;
+  /* Add in font-famlilies */
+  font-family: "Rhodium Libre", Belgrano, serif;
+  font-weight: bold;
+  
+}
+
+
+/*ATTRIBUTION for record player image Image by
+
+https://pixabay.com/users/rahu-4725201/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2951399">rahul yadav</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2951399"
+
+*/
+
+
+
+
+
+/* Hero image/ Image wrapper */
+.hero-wrapper{
+  display: flex;
+  flex-direction: column;  
+  justify-content: flex-end;
+ 
+ 
+  width: 100vw;
+  height: 80vh;
+  background-image: url(../images/RecordPlayer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+
+
+h1 {
+  font-family: "Abril Fatface", "Rhodium Libre", serif;
+  font-size: 2.25rem;
+  text-shadow: 2px 2px 2px black;
+  text-align: right;
+  font-variant: small-caps;
+  letter-spacing: .1em;
+  color: palevioletred;
+ 
+  width: 45vw;
+  margin: 0;
+  margin-left: auto;
+}
+
+
+
+/* Basic <nav> styling */
+nav {
+  /* pull navigation to the bottom of the page */
+  display: flex;
+  margin : 0 auto;
+  align-self: flex-end;
+  width: 100vw;
+}
+
+
+ul {
+  display: flex;
+  flex-grow: 1;
+  padding-left: 0;
+  list-style: none;
+  margin: 5vmin auto 0 auto;
+  align-items: center;
+}
+
+
+ul li {
+  display: flex;
+  flex-grow: 1;
+  /* border: antiquewhite 2px dashed; */
+  justify-content: center;
+}
+
+
+
+ul li a {
+  display: block;
+  padding: 1ch;
+  min-width: 10ch;
+    
+  font-variant: small-caps;
+  font-size: 1.1em;
+  text-align: center;
+  text-decoration: none;
+  color: black; 
+
+  background-color: antiquewhite;
+  box-shadow: teal 2px 2px 0px 0px;
+
+  transition: all .3s ease-out;
+}
+
+.link-hover:hover {
+  background-color: palevioletred;
+  transform: translate(-1px, -5px);
+  box-shadow: teal 4px 4px 5px 2px;
+  
+}
+
+
+
+
+
+/* The Record logo... Buncha hedge wizardy */
+
+.logo-wrap {
+  border: 2px dashed antiquewhite;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+ul li:nth-child(3) a{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  width:initial;
+  
+  justify-content: center;
+}
+
+ul li:nth-child(3) {
+  padding: 0;
+  margin: 0 2vw;
+}
+
+img {
+  /* Try to add in some min-max dimensions */
+  min-width: 7ch;
+  min-height: 7ch;
+  width: 10vw;
+  height: 10vw;
+  display: block;
+  /* place transition on the element itself to ensure hover effect and return have the same 'animation' */
+  transition: all .3s ease-out;
+}
+
+/* basically the anchor tag within third child (list item) of the ul will cause the record logo inside of it to rotate on hover.*/
+ul li:nth-child(3) a:hover > img {
+  transform: rotate(180deg);
+  
+}
+
+
+
+
+
+/* Call to Action button */
+.cta {
+  background-color: palevioletred;
+  min-width:18ch;
+  width: 10vw;
+  min-height: 10ch;
+  height: 7.5vw;
+  border-radius: 40px;
+  border: 3px outset palegreen;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.cta a {
+  display:flex;
+  align-items: center;
+  
+  min-height: 10ch;
+  line-height: 1.5ch;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-variant: small-caps; 
+
+  transition: all .3s ease-out;
+}
+
+.cta a:hover {
+  background-color: black;
+  color: palevioletred;
+}
+
+@media screen and (max-width:600px) {
+  h1 {
+    width: 80vw;
+    margin: 2vh auto;
+  }
+
+  .cta {
+    margin:2.5vmin auto;
+  }
+
+  ul {
+    flex-wrap: wrap-reverse;
+  }
+  
+  ul li:nth-child(3) {
+    order: 1;
+  
+  }
+}
+
