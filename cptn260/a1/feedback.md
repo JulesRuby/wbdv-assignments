@@ -1,0 +1,5 @@
+- your alignment is a little awkward but it's nicely responsive
+- more padding is needed for your hero wrapper so your cta and heading don't touch the sides of the window. even 1em helps a lot.
+- try making your transitions a bit faster. users aren't very patient when it comes to nav animation. try for a .25s or less
+- there are options other than using the `div` wrappers
+- the `hero-wrapper` and `logo-wrap` class names are inconsistent

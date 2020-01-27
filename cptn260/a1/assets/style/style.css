@@ -35,6 +35,8 @@ https://pixabay.com/users/rahu-4725201/?utm_source=link-attribution&amp;utm_medi
  
   width: 100vw;
   height: 80vh;
+  padding: 0 1em;
+
   background-image: url(../images/RecordPlayer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
