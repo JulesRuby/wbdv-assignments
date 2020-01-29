@@ -1,0 +1,4 @@
+- Great commenting and html structure! The social links could be in a nav element.
+- Only one column is needed for this design since everything is centred.
+- you only need to explicitly set the rows (in this design) for overlapping elements. Dobby can place the rest (name/bio/social).
+- Great work!

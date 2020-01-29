@@ -58,7 +58,7 @@ body {
   /* Assign grid space overlapping with the bg image, in order to pull the profile onto it*/
   grid-column: 1/4;
   grid-row:2/4;
-  align-self: center;
+  /* align-self: center; */
   justify-self: center;
   object-fit: cover;
 
@@ -72,7 +72,7 @@ body {
 
 .bio {
   grid-column: 1/4;
-  grid-row:4/6;
+  /* grid-row:4/6; */
   text-align: center;
 }
 
@@ -88,7 +88,7 @@ h1 {
 /* Bio */
 
 p {
-  font-weight: bold;
+  /* font-weight: bold; */
   padding: 2ch 1.5ch;
   margin: 0;
 }
@@ -98,7 +98,7 @@ p {
 
 .social {
   display: flex;
-  grid-row: 6/7;
+  /* grid-row: 6/7; */
   grid-column:1/4;
   justify-content: space-evenly;
   
