@@ -1,0 +1,263 @@
+@import url(font.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+ 
+  
+  background-color: paleturquoise;
+  background-image: url(../images/Jules\ Ruby\ -\ AH\ -\ High\ Res\ \(69\ of\ 239\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+/*//////////// Grouping displays////////// */
+
+.logo,
+.reg-btn,
+ul li,
+ul li a {
+  display: block;
+}
+
+ul,
+.form-band,
+form,
+.sign-in-field,
+.sign-in-field p {
+  display: flex;
+}
+
+/* /////////Grouping Transition/////////////// */
+
+.reg-btn,
+ul li a,
+input {
+  transition: all .1s;
+}
+
+
+
+
+/*/////////////////Navigation and Header/////////////////*/
+
+.logo {
+  width: 150px;
+  margin: auto;
+}
+
+/* Shaping the registration link to look like a button*/
+.reg-btn {
+  margin: 1rem auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  max-width: 380px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: hsla(208deg, 48%, 20%, .95);
+
+  background-color: hsla(5deg, 20%, 75%);
+  border: 4px outset hsla(208deg, 48%, 35%, .95);
+  border-radius: 10px;
+
+  
+}
+
+nav {
+  background-color: hsla(208deg, 48%, 20%, .95);
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  
+  list-style: none;
+}
+
+ul li {
+  flex-grow: 1;
+}
+
+ul li a {
+  flex-grow: 1;
+
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  color: hsl(39deg, 9%, 85%);
+ 
+  
+}
+
+a:hover {
+  background-color: hsl(39deg, 9%, 85%);
+  color: hsl(208deg, 51%, 10%);
+}
+
+
+
+/* /////////////////Form//////////////// */
+
+.overlap1 {
+  position: absolute;
+  background-color: hsla(5deg, 20%, 75%, 0.9);
+  width: 30%;
+  height: 30%;
+  border-radius: 0 50% 50% 50%;
+  top: -5%;
+  left: -5%;
+
+  z-index: 1;
+ 
+}
+
+.form-band {
+  justify-content: center;
+ }
+
+form {
+  position: relative;
+  flex: 1 1 auto;
+    
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+ 
+  background-color: hsla(208deg, 48%, 25%, .95);
+ 
+  border-radius: 15px;
+}
+
+form legend {
+  /* Margin appeared to fix in FF? Need to confirm */
+  margin: 0 auto;
+  /* text-align center seemed to work in Chrome, but not FF */
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sign-in-field {
+  flex: 1 1 auto;
+  flex-direction: column;
+  
+  border: 0;
+}
+
+.sign-in-field h1 {
+  letter-spacing: .1ch;
+}
+
+.sign-in-field p {
+  justify-content: space-between;
+}
+
+.sign-in-field label,
+.sign-in-field input {
+  padding: 1rem;
+}
+
+.sign-in-field label {
+  flex: 1 1 auto;
+  max-width: 15ch;
+
+  font-size: 1rem;
+  text-align: right;
+}
+
+
+
+input[type="submit"] {
+  margin: auto;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 380px;
+
+  font-family: "Roboto Mono", sans-serif;
+
+  border: 4px outset hsla(208deg, 48%, 35%, .95);
+  background-color: hsla(208deg, 48%, 20%, .95);
+}
+
+input[type="submit"]:hover {
+  border: 4px inset hsla(39deg, 9%, 65%);
+  background-color: hsl(39deg, 9%, 85%);
+  color: hsl(208deg, 51%, 10%);
+}
+
+
+input {
+  flex: 2 1 auto;
+
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  
+  background-color: hsla(208deg, 51%, 10%, 0.3);
+  border: 0;
+  border-radius: 10px;
+  
+  transition: all .1s;
+}
+
+
+input:focus,
+input:hover {
+  border: 0;
+  box-shadow: 0 0 10px 5px hsl(39deg, 9%, 85%, 0.3);
+  /* Remove outline to avoid clashing with hover shadow */
+  outline: 0;
+}
+
+.sign-in-field label,
+.sign-in-field input,
+.sign-in-field h1 {
+  color: hsl(39deg, 9%, 85%);
+}
+
+
+/* Make it friendlier for the small viewports */
+
+@media screen and (max-width: 500px) {
+  form {
+    padding: 1rem .75rem;
+  }
+
+  .sign-in-field legend {
+    margin: 0;
+    
+  }
+
+  .sign-in-field legend h1 {
+    margin: .75rem;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  
+  .sign-in-field p {
+    flex-direction: column;
+    margin: 0;
+    
+  }
+
+  .sign-in-field label {
+    margin: 0;
+    padding: .5rem 0;
+    text-align: left;
+  }
+
+  .sign-in-field input[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+
+    background-color: hsl(39deg, 9%, 85%);
+    color: hsl(208deg, 51%, 10%);
+  }
+}

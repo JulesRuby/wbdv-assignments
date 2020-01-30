@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign-in | Assignment 3</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+<style>
+
+
+</style>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Sea_cucumber">Sea Cucumber</a></li>
+        <li><a href="index.html">Sign In</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+    <img class="logo" src="images/mono-butts-no-bg.svg">
+    <a href="registration.html" class="reg-btn">Register today!</a>
+  </header>
+
+  <section class="form-band">
+    <!-- <div class="overlap1"></div> -->
+    <form action="#" method="post">
+      <div class="overlap1"></div>
+      <fieldset class="sign-in-field">
+        <legend>
+          <h1>
+            Enter login credentials
+          </h1>
+        </legend>
+        
+        <p>
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" placeholder="Username" pattern=".{6,18}" required title="Usernames are between 6-18 characters">
+        </p>
+        
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required title="Min 10 characters, min 1 uppercase, min 1 number">
+        </p>
+        
+        <input type="submit" value="Submit">
+      </fieldset>      
+    </form>
+  </section>
+</body>
+
+</html>

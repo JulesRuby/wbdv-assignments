@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Open+Sans|Roboto+Mono&display=swap');
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Arsenal", sans-serif;
+}
+
+input {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(39deg, 9%, 85%);
+}

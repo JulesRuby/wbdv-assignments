@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register | Assignment 3</title>
+  <link rel="stylesheet" type="text/css" href="css/register.css">
+
+<style>
+
+
+</style>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Sea_cucumber" class="">Sea Cucumber</a></li>
+        <li><a href="index.html">Sign In</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <section class="form-grid">
+    
+    <form action="#" method="post">
+        
+      <fieldset class="reg-field">
+        <legend>
+          <h1>
+            Registration
+          </h1>
+          <p>Required fields are marked with <span>*</span></p>
+        </legend>
+        
+        <!-- between 8 and 16 characters -->
+        <!-- use spans around asterisk for red required indicator -->
+        <p>
+          <label for="username">Username:<span>*</span></label>
+          <input type="text" name="username" id="username" placeholder="Username" pattern=".{6,18}" required title="Choose a username between 6-18 characters">
+        </p>
+
+        <p>
+          <label for="email">E-mail:<span>*</span></label>
+          <input type="email" name="email" id="email" placeholder="example@dom.com" required title="Please use a valid e-mail &quot;name@domain.xxx&quot;">
+        </p>
+        
+        <p>
+          <label for="password">Password:<span>*</span></label>
+          <!-- At least: 10 char, 1 lowercase letter, 1 uppercase letter  -->
+          <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required title="Min 10 characters, min 1 uppercase, min 1 number">
+        </p>
+
+        <!-- Ten digits exactly -->
+        <p>
+          <label for="phone">Phone #:</label>
+          <input type="text" name="phone" id="phone" placeholder="##########" pattern="[0-9]{10}" title="only numbers, 10 digits max">
+        </p>
+        
+        <!-- At least: 10 char, 1 lowercase letter, 1 uppercase letter. No idea how to validate matching passwords  -->
+        <p>
+          <label for="confirm">Confirm Password:<span>*</span></label>
+          <input type="password" name="confirm" id="confirm" placeholder="Re-type Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required title="Min 10 characters, min 1 uppercase, min 1 number... also matching">
+        </p>
+
+        <p class="full-span">
+          <label for="upload">Upload Profile Pic:<span>*</span></label>
+          <input type="file" name="upload" id="upload" required title="upload your pic and get catfishing">
+        </p>
+        
+        <input type="submit" value="Register">
+        
+      </fieldset>
+    </form>
+
+  </section>
+  
+</body>
+
+</html>
