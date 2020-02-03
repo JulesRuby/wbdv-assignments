@@ -1,0 +1,183 @@
+.contact-space {
+  grid-column: 2/7; 
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+  min-height: 100vh;
+  
+  overflow: hidden;
+
+  background-color: hsla(0deg, 100%, 0%, 1);
+}
+
+.contact-space > h1 {
+  text-align: center;
+  
+  margin: 2rem auto;
+  width: 100%;
+  grid-column: 1/-1;
+  width:100%;
+
+  /* validator doesn't seem to like this, but it breaks if I change it */
+  font-size: calc(16px + (48 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+
+form,
+.sign-in-field,
+.sign-in-field p {
+  display: flex;
+}
+
+form {
+  flex: 1 1 auto;
+    
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+  min-height: 600px;
+ 
+  background-color: hsla(208deg, 10%, 85%, .95);
+ 
+  border-radius: 15px;
+}
+
+form legend {
+  /* Margin appeared to fix in FF? Need to confirm */
+  margin: 0 auto;
+  /* text-align center seemed to work in Chrome, but not FF */
+  text-align: center;
+  text-transform: capitalize;
+}
+
+form legend {
+  font-size: 2rem;
+}
+
+.sign-in-field {
+  display: flex;
+
+  flex: 1 1 auto;
+  flex-direction: column;
+  
+  border: 0;
+}
+
+.sign-in-field h3 {
+  letter-spacing: .1ch;
+}
+
+.sign-in-field p {
+  justify-content: space-between;
+}
+
+.sign-in-field label,
+.sign-in-field input {
+  padding: 1rem;
+}
+
+.sign-in-field label {
+  flex: 1 1 auto;
+  max-width: 15ch;
+
+  font-size: 1rem;
+  text-align: right;
+}
+
+textarea {
+  flex-grow: 1;
+}
+
+
+
+input[type="submit"] {
+  margin: auto;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 380px;
+  max-height: 4rem;
+
+  font-family: "Roboto Mono", sans-serif;
+
+  border: 4px outset rgba(97, 97, 97, 0.95);
+  background-color: rgba(35, 36, 37, 0.95);
+}
+
+input[type="submit"]:hover {
+  border: 4px inset hsla(39deg, 9%, 65%);
+  background-color: hsl(39deg, 9%, 85%);
+  color: hsl(35, 36, 37, 0.95);
+}
+
+
+input {
+  flex: 2 1 auto;
+
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  
+  background-color: hsla(208deg, 51%, 10%, 0.3);
+  border: 0;
+  border-radius: 10px;
+  
+  transition: all .1s;
+}
+
+
+input:focus,
+input:hover {
+  border: 0;
+  box-shadow: 0 0 10px 5px rgba(3, 3, 3, 0.3);
+  /* Remove outline to avoid clashing with hover shadow */
+  outline: 0;
+}
+
+.sign-in-field label,
+.sign-in-field input,
+.sign-in-field h3 {
+  color: black;
+}
+
+
+/* Make it friendlier for the small viewports */
+
+@media screen and (max-width: 600px) {
+  form {
+    padding: 1rem .75rem;
+  }
+
+  .sign-in-field legend {
+    margin: 0;
+    
+  }
+
+  .sign-in-field legend h1 {
+    margin: .75rem;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  
+  .sign-in-field p {
+    flex-direction: column;
+    margin: 0;
+    
+  }
+
+  .sign-in-field label {
+    margin: 0;
+    padding: .5rem 0;
+    text-align: left;
+  }
+
+  .sign-in-field input[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+
+    background-color: hsl(39deg, 9%, 85%);
+    color: hsl(208deg, 51%, 10%);
+  }
+}

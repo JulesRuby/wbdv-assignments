@@ -1,0 +1,97 @@
+.about-space {
+  grid-column: 2/7;  
+  height:100vh;
+  overflow: hidden;
+
+  background-color: hsla(0deg, 100%, 0%, 1);
+}
+
+
+/* The will occupy the space between the portrait and the about-right element */
+.about-space > p,
+.about-space > h2  {
+  /* I don't think I need this, but keep it, in case */
+  shape-outside: polygon(0 0, 75% 0, 100% 100%, 25% 100%); 
+    
+  color: white;
+}
+
+.about-space h2 {
+  font-size: 2rem;
+}
+
+.about-space > p {
+  line-height: 1.5;
+}
+
+
+
+#about-portrait {
+  /* preserve aspect ratio as much as possible */
+  object-fit: cover;
+ 
+  /* float picture to the left and adding shape+pathing */
+  float: left;
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+  shape-outside: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+  margin-right: 3em;
+
+  /* image responds to section dimensions */
+  width: 50%;
+  height:100%;
+}
+
+  /* placing this here to further build restriction around the text */
+ .about-right {
+  background-color: white;
+  
+  /* push to the right and adding shape+pathing*/
+  float: right;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  margin-left: 3em;
+  /* because the width is half of the portrait, I doubled the second-last value of the clip-path and shape-outside, to make the shape match */
+  width: 25%;
+  height:100%;
+}
+
+
+@media screen and (max-width: 600px) {
+  #about-portrait {
+    float: none;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);;
+    shape-outside: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);;
+    margin-right: 0;
+    width: 100%;
+    height:50%;
+
+  
+    /* image responds to section dimensions */
+    
+  }
+
+  .about-space > p,
+  .about-space > h2  {
+    text-align: center;
+    min-width: 30ch;
+    shape-outside: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);; 
+
+    color: white;
+}
+
+.about-space > h2 {
+  margin: .5rem auto;
+  min-width: initial;
+}
+
+.about-space > p {
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  line-height: 1.5;
+}
+
+  .about-right {
+    display: none;
+    
+  }
+}

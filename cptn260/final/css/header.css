@@ -1,0 +1,203 @@
+/*  Creating a fixed side-nav bar */
+/* The goal is to have the nav located inside the header, though not have it restrict the size of the header. Hopefully keeping things semantically in place, though not inhibiting the hero section */
+header {
+  display: grid;
+  grid-template-columns: minmax(200px, 15vw) repeat(5, 1fr);
+  grid-column: 1/-1;
+  
+  height:95vh;
+
+  background-color: maroon;
+}
+
+
+/* Navigation */
+
+
+nav {
+  
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  
+  /* height seems to be more efficiently set within the ul, for styling purposes. */
+  
+  background: hsla(250deg, 50%, 50%, 0.3);
+  
+}
+
+
+
+/* hide burger */
+.hamburger {
+  display: none;
+} 
+
+#nav-logo {
+  width: 200px;
+}
+
+
+nav ul .logo-anchor {
+  background-color: black;
+}
+
+/* logo is replaced with heading text when screen shrinks enough */
+nav ul li h1 {
+  display: none;
+}
+
+nav > ul {
+  position: fixed;
+  display: flex;
+  grid-column: 1/2;
+  margin: 0;
+
+  min-width: 200px;
+  width: 15vw;
+  max-width: 15vw;
+  height: 100vh;
+ 
+  /* flex column, axis' now reversed */
+  flex-direction: column;
+  justify-content: center;
+
+  background: hsla(250deg, 50%, 0%, 1);
+  /* background: hsla(250deg, 50%, 100%, 1); */
+
+  text-align: center;
+}
+
+/* Place logo/title at the top */
+nav > ul > li:first-child {
+  margin-bottom: auto;
+}
+
+nav ul li:first-child a{
+  padding: 0;
+  color: white;
+}
+
+
+/* Place social media strip at the bottom */
+nav > ul > li:last-child {
+  margin-top: auto;
+}
+
+nav ul li a {
+  padding: 1rem;
+  color: white;
+  transition: all .1s;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+nav > ul > li:last-child {
+  margin-top: auto;
+}
+
+/* Flex the ul to distribute the icons horizontally */
+.social-ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.social-ul li a{
+  color:white;
+  flex-grow:1;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  padding: 0;
+  font-size: 2rem;
+}
+.social-ul li a:hover{
+  background-color: black;
+  color: white;
+  text-shadow:0px 5px 9px #E7E7E7;;
+}
+
+.social-ul li:first-child{
+  margin-left: .5rem;
+  
+}
+
+
+/* Actual hero-section type work  */
+
+
+.hero-space {
+  grid-column: 2/7;  
+  
+  display: grid;
+  grid-template-columns: minmax(25vmin, max-content) 1fr minmax(25vmin, max-content);
+  gap: 1em;
+  grid-template-rows: minmax(25vmin, max-content) 1fr minmax(25vmin, max-content);
+
+  overflow: hidden;
+
+  background-color: hsla(0deg, 100%, 100%, 0.5);
+  background: url(../images/hero-bubbles.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* insert triangluar corners on the hero */
+.corner {
+  background-color: black;
+  
+}
+
+.hero-space > div:first-child {
+  grid-column: 1/2;
+  grid-row: 1/1;
+  /* rotating squares and translating them to look like triangles */
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-bottom: none;
+  border-right: none;
+}
+
+.welcome-place {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   
+  grid-column: 1/4;
+  grid-row: 2/3;
+  margin:auto;
+
+  min-width: max-content;
+  width: 100%;
+  max-width: 100%;
+
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6001751042213761) 50%, rgba(255,255,255,0) 100%);
+  border: none;
+}
+
+.hero-space h1 {
+  color: black;
+  margin: auto;
+
+  font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1rem;
+}
+
+
+.welcome-place > p {
+  text-align: right;
+}
+
+.hero-space > div:last-child {
+  grid-column: 3/4;
+  grid-row: 3/4;
+
+  transform: translate(50%, 50%) rotate(45deg);
+  border-left: none;
+  border-top: none;
+}
+
+
+
+
+
