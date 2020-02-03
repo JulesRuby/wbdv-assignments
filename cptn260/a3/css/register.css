@@ -1,0 +1,241 @@
+@import url(font.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  
+  background-color: paleturquoise;
+  background-image: url(../images/Jules\ Ruby\ -\ AH\ -\ High\ Res\ \(69\ of\ 239\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3.5rem 4fr;
+
+}
+
+/*//////////// Grouping displays////////// */
+
+ul li,
+ul li a,
+.reg-field p,
+.reg-field label {
+  display: block;
+}
+
+ul,
+ul li {
+  display: flex;
+}
+
+/* /////////Grouping Transition/////////////// */
+
+
+ul li a,
+input,
+input[type="submit"] {
+  transition: all .1s;
+}
+
+
+
+
+/*----------------------------------------------------- 
+Navigation 
+-----------------------------------------------------*/
+
+nav {
+  background-color: hsla(208deg, 48%, 20%, .95);
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  
+  list-style: none;
+}
+
+ul li {
+  flex-grow: 1;
+}
+
+ul li a {
+  flex-grow: 1;
+
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  color: hsl(39deg, 9%, 85%);
+}
+
+a:hover {
+  background-color: hsl(39deg, 9%, 85%);
+  color: hsl(208deg, 51%, 10%);
+}
+
+/* /////////////////Form//////////////// */
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  margin: auto;
+}
+
+form {
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+ 
+  background-color: hsla(208deg, 48%, 25%, .95);
+ 
+  border-radius: 15px;
+}
+
+form legend {
+  margin: 0 auto;
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+}
+
+/* required field indicator */
+span {
+  color: red;
+}
+
+form legend p {
+  font-size: .75rem;
+}
+
+.reg-field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5vw;
+  grid-auto-rows: min-content;
+  row-gap: 2vh;
+  align-items: center;
+
+  border: 0;
+}
+
+.reg-field h1 {
+  letter-spacing: .1ch;
+}
+
+.reg-field p {
+  margin: 0;
+  display: block;;
+}
+
+.reg-field label {
+  display: block;;
+  
+  flex: 1 1 auto;
+  font-size: 1em;
+  text-align: left;
+}
+
+.reg-field input {
+  width: 100%;
+  padding: .75rem;
+  flex: 2 1 auto;
+}
+
+/* force an element to span the full grid width */
+.full-span {
+  grid-column: 1/3;
+}
+
+input[type="submit"] {
+  margin: auto;
+  margin-top: 1rem;
+  width: 100%;
+  grid-column: 1/3;
+  max-width: 380px;
+
+  font-family: "Roboto Mono", sans-serif;
+
+  border: 4px outset hsla(208deg, 48%, 35%, .95);
+  background-color: hsla(208deg, 48%, 20%, .95);
+}
+
+input[type="submit"]:hover {
+  
+  border: 4px inset hsla(39deg, 9%, 65%);
+  background-color: hsl(39deg, 9%, 85%);
+  color: hsl(208deg, 51%, 10%);
+}
+
+/* Broad style */
+input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+
+  background-color: hsla(208deg, 51%, 10%, 0.3);
+  border: 0;
+  border-radius: 10px;
+}
+
+input:focus,
+input:hover {
+  border: 0;
+  box-shadow: 0 0 10px 5px hsl(39deg, 9%, 85%, 0.3);
+  outline: 0;
+}
+
+.reg-field label,
+.reg-field input,
+.reg-field h1,
+.reg-field legend {
+  color: hsl(39deg, 9%, 85%);
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  form {
+    padding: 1rem .75rem;
+    
+  }
+
+  .reg-field {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .reg-field legend h1 {
+    margin: .75rem
+
+  }
+  
+  .reg-field p {
+    flex-direction: column;
+    margin: 0;
+    
+  }
+
+  .login label {
+    margin: 0;
+    padding: .5rem 0;
+    text-align: left;
+  }
+
+  .login input[type="submit"] {
+    width: 100%;
+
+    background-color: hsl(39deg, 9%, 85%);
+    color: hsl(208deg, 51%, 10%);
+  }
+} 
