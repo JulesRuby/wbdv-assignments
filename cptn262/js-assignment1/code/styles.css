@@ -1,0 +1,132 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+GENERAL 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.container {
+    max-width: 900px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+NAV 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+nav {
+    border-bottom: 1px solid #ededed;
+}
+
+.navbar > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .container ul {
+    display: flex;
+}
+
+nav .container ul li {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.logo {
+    background: url('./img/logo.svg');
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 30px;
+    width: 30px;
+}
+
+@media (max-width: 600px) {
+    nav .container {
+        padding: 0 30px;
+    }
+
+    nav .container ul {
+        display: none;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+CARDS
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Your styles go here */
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow:1;
+
+    margin: 1%;
+    padding: 2%;
+    width: 275px;
+    height: 275px;
+    
+    border-radius: 10px;
+    box-shadow: 6px 8px 20px -1px rgba(0,0,0,0.4);
+    
+    /* background: no-repeat center url(./img/coffee.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Having images as the card background makes it challenging to see the font */
+/* So I created this low opacity linear gradient overlay */
+.over {
+    /* background-color: rgba(0,0,0,0.2); */
+    width:100%;
+    height:100%;
+    top: 0;
+    left:0;
+    border-radius: 10px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6085784655659139) 83%);
+}
+
+/* forcing the text to remain above the overlay*/
+.category,
+.tag-line {
+    color: white;
+    z-index: 5;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.tag-line {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1;
+
+    margin-top: 5px;
+}
+
+.button {
+    font-size: .8rem;
+    font-weight: bold;
+    
+    padding: 2ch 0;
+    margin-top: auto;
+    margin-right: auto;
+    width: 54%;
+
+    border: outset 1px #ccc;
+}
+
