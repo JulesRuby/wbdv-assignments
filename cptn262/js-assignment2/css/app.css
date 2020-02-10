@@ -1,0 +1,223 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+GENERAL
+- - - - - - - - - - - - - - - - - - - - - - - - */
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.primary-button {
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: #333;
+  color: white;
+  border: 1px solid #333;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.secondary-button {
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: #777;
+  color: white;
+  border: 1px solid #777;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HEADER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+header {
+  height: 80px;
+  background: #333;
+}
+
+header nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+header .logo {
+  background: url('../assets/logo.svg');
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+}
+
+header ul {
+  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+header li {
+  color: white;
+  list-style: none;
+  margin: 0;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* 
+Just going to through my code down here
+ */
+ .open,
+.closed {
+  display: none;
+}
+ 
+ /* the hamburger menu does not display by default */
+.hamburger-container {
+  display: none;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HERO
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.hero {
+  background: linear-gradient(
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.4)
+      ),
+      url('https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80');
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  padding-top: 10vh;
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 1px;
+}
+.hero h2 {
+  margin-top: 0;
+}
+
+.hero p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+MAIN CONTENT
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.main-content {
+  padding: 80px 0;
+}
+
+.main-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+FOOTER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+footer {
+  height: 300px;
+  background: #333;
+}
+
+.menu {
+  transition: all 0s;
+}
+
+
+/* ///////////////////////////////////////////////////////
+                Media Query code below
+/////////////////////////////////////////////////////////*/
+
+
+@media screen and (max-width: 600px) {
+  /* Hamburger menu will appear */
+  .hamburger-container {
+    display: block;
+    margin-left: auto;
+
+    align-self: flex-end;
+  }
+
+  .open,
+  .closed {
+    display: block;
+  }
+
+  /* allowing the menu to reach the right side of the viewport */
+  .wrapper {
+    margin-right: 0;
+  }
+
+  .menu {
+    position: relative;
+    /* position: fixed; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+
+    left:50vw;
+    padding: 15px 15px 0 10px;
+    width: 50vw;
+    height: 1000vh;
+
+    background-color: rgb(44, 44, 44);
+    opacity: 0;
+  }
+
+  /* I applied the transitions to this class, rather than the base class to avoid the menu visbily animating on the mobile break point. */
+  .menu-active {
+    transform: translateX(-50vw);
+    opacity: 1;
+    transition: all .10s linear;
+  }
+  
+  /* remove the padding from the menu icon, making it easier to style and avoiding create button space that expands beyond the visual  */
+  menu-close-container {
+    padding: 0;
+  }
+
+  header ul li:first-child {
+    position: relative;
+  }
+
+  header ul li:nth-child(n+2) {
+    width: 85%;
+  }
+
+  /* selecting every list item and anchor in the nav ul, beyond the first one */
+   header ul li:nth-child(n+2),
+   header ul li:nth-child(n+2) a { 
+    display: block;
+    z-index: 5;
+
+    text-align: left;
+    font-size: 1.25rem;
+  }
+
+  header ul li a {
+    padding: .75rem;
+  }
+}

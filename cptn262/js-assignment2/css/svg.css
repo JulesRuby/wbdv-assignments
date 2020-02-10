@@ -1,0 +1,40 @@
+.menu-close-container {
+  position: relative;
+}
+
+.menu-close-container > a{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  
+  opacity: 0;
+  transition: all linear .10s;
+}
+
+.open-transition {
+  opacity: 1;
+}
+
+.closed {
+  justify-self: flex-end;
+  margin-left: auto;
+  transform: translateX(45vw);
+  opacity: 1;
+  cursor: pointer;
+  
+  transition: all linear .10s;
+}
+
+.closed-transition {
+  transform: translateX(65vw);
+  opacity:0;
+}
+
+
